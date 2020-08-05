@@ -66,8 +66,54 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    int i = 0;
     return Scaffold(
+      appBar:AppBar(
+        backgroundColor:Colors.transparent,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:[
+            Stack(
+              alignment: AlignmentDirectional.center,
+              children:[
+                Container(
+                  height:50,
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Image.asset(
+                        "assets/images/gui/buttonmenu.png"
+                    ),
+                  ),
+                ),
+                Text(
+                  "Register",
+                  style: TextStyle(color: Colors.black, fontSize: 12.0),
+                ),
+              ],
+            ),
+            Stack(
+              alignment: AlignmentDirectional.center,
+              children:[
+                Container(
+                  height:50,
+                  child: Image.asset(
+                      "assets/images/gui/topmenu.png"
+                  ),
+                ),
+                Text(
+                  "Login",
+                  style: TextStyle(color: Colors.black, fontSize: 20.0),
+                ),
+              ],
+            ),
+            Container(
+              height:50,
+              child: Image.asset(
+                  "assets/images/gui/fb.png"
+              ),
+            )
+          ],
+        ),
+      ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -76,77 +122,32 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:[
-                Stack(
-                  alignment: AlignmentDirectional.center,
-                  children:[
-                    Container(
-                      height:50,
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Image.asset(
-                            "assets/images/gui/buttonmenu.png"
-                        ),
-                      ),
-                    ),
-                    Text(
-                      "Register",
-                      style: TextStyle(color: Colors.black, fontSize: 12.0),
-                    ),
-                  ],
-                ),
-                Stack(
-                  alignment: AlignmentDirectional.center,
-                  children:[
-                    Container(
-                      height:70,
-                      child: Image.asset(
-                          "assets/images/gui/topmenu.png"
-                      ),
-                    ),
-                    Text(
-                      "Login",
-                      style: TextStyle(color: Colors.black, fontSize: 20.0),
-                    ),
-                  ],
-                ),
-                Container(
-                  height:50,
-                  child: Image.asset(
-                      "assets/images/gui/fb.png"
-                  ),
-                )
-              ],
-            ),
             Container(
               alignment: Alignment.center,
-              height:120,
+              height:220,
               child: ListView(
                 shrinkWrap:true,
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
+                    width: 120.0,
                     color: Colors.red,
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
+                    width: 120.0,
                     color: Colors.blue,
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
+                    width: 120.0,
                     color: Colors.green,
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
+                    width: 120.0,
                     color: Colors.yellow,
                   ),
                   Container(
@@ -156,22 +157,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
+                    width: 120.0,
                     color: Colors.orange,
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
+                    width: 120.0,
                     color: Colors.orange,
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
+                    width: 120.0,
                     color: Colors.orange,
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
+                    width: 120.0,
                     color: Colors.orange,
                   ),
                 ],
