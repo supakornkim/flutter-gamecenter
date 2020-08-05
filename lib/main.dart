@@ -76,95 +76,123 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children:[
-                Container(
-                  height:50,
-                  child: Image.asset(
-                      "assets/images/gui/buttonmenu.png"
+            Flexible(
+              flex: 2,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  Stack(
+                    alignment: AlignmentDirectional.center,
+                    children:[
+                      Container(
+                        height:50,
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Image.asset(
+                              "assets/images/gui/buttonmenu.png"
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Register",
+                        style: TextStyle(color: Colors.black, fontSize: 12.0),
+                      ),
+                    ],
                   ),
-                ),
-                Container(
-                  height:120,
-                  child: Image.asset(
-                      "assets/images/gui/topmenu.png"
-                  ),
-                ),
-                Container(
-                  height:50,
-                  child: Image.asset(
-                      "assets/images/gui/fb.png"
-                  ),
-                )
-              ],
-            ),
-            Container(
-              height:120,
-              child: ListView(
-                shrinkWrap:true,
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.red,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.blue,
+                  Stack(
+                    alignment: AlignmentDirectional.center,
+                    children:[
+                      Container(
+                        height:70,
+                        child: Image.asset(
+                            "assets/images/gui/topmenu.png"
+                        ),
+                      ),
+                      Text(
+                        "Login",
+                        style: TextStyle(color: Colors.black, fontSize: 20.0),
+                      ),
+                    ],
                   ),
                   Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.green,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.orange,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.orange,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.orange,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.orange,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 20.0),
-                    width: 80.0,
-                    color: Colors.orange,
-                  ),
+                    height:50,
+                    child: Image.asset(
+                        "assets/images/gui/fb.png"
+                    ),
+                  )
                 ],
               ),
             ),
-            Row(
-              children:[
-                Container(
-                  height:50,
-                  child: Image.asset(
-                      "assets/images/gui/buttonmenu.png"
-                  ),
-                )
-              ],
+            Flexible(
+              flex: 3,
+              child: Container(
+                height:120,
+                child: ListView(
+                  shrinkWrap:true,
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.green,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.yellow,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.orange,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.orange,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.orange,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.orange,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20.0),
+                      width: 80.0,
+                      color: Colors.orange,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Flexible(
+              flex:2,
+              child: Row(
+                children:[
+                  Container(
+                    height:50,
+                    child: Image.asset(
+                        "assets/images/gui/buttonmenu.png"
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),
