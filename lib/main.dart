@@ -79,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Flexible(
               flex: 2,
+              fit: FlexFit.tight,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
@@ -125,7 +126,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Flexible(
-              flex: 3,
+              flex: 2,
+              fit: FlexFit.tight,
               child: Container(
                 height:120,
                 child: ListView(
@@ -182,7 +184,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Flexible(
-              flex:2,
+              flex: 2,
+              fit: FlexFit.tight,
               child: Row(
                 children:[
                   Container(
