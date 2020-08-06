@@ -46,6 +46,7 @@ flutter:
   assets:
     - assets/images/background/background3.png
     - assets/images/background/background4.jpg
+    - assets/images/background/background5.jpg
     - assets/images/gui/topmenu.png
     - assets/images/gui/buttonmenu.png
     - assets/images/gui/fb.png

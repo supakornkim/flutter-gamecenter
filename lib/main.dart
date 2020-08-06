@@ -69,6 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar:AppBar(
         backgroundColor:Colors.transparent,
+        flexibleSpace: Image(
+          image: AssetImage('assets/images/background/background5.jpg'),
+          fit: BoxFit.cover,
+        ),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children:[
@@ -117,19 +121,20 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/background/background4.jpg"),
+            image: AssetImage("assets/images/background/background5.jpg"),
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
-          children: <Widget>[
-            Container(
-              alignment: Alignment.center,
-              height:220,
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Center(
+            child: Container(
+              height: 220,
+              margin: const EdgeInsets.only(bottom: 50.0),
               child: ListView(
-                shrinkWrap:true,
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
+              shrinkWrap:true,
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
                   Container(
                     margin: const EdgeInsets.only(left: 20.0),
                     width: 120.0,
@@ -178,17 +183,38 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            Row(
+          ),
+          bottomSheet: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/background/background5.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children:[
-                Container(
-                  height:50,
-                  child: Image.asset(
-                      "assets/images/gui/buttonmenu.png"
+                Padding(
+                  padding: const EdgeInsets.only(left:50.0),
+                  child: Stack(
+                    alignment: AlignmentDirectional.center,
+                    children:[
+                      Container(
+                        height:50,
+                        child: Image.asset(
+                            "assets/images/gui/buttonmenu.png"
+                        ),
+                      ),
+                      Text(
+                        "Gift",
+                        style: TextStyle(color: Colors.black, fontSize: 12.0),
+                      ),
+                    ]
                   ),
                 )
               ],
             ),
-          ],
+          ),
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
